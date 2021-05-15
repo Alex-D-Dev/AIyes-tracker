@@ -1,0 +1,55 @@
+<html>
+        
+        {% include 'header.html' %}
+
+    
+        <center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form action="/confirmation_inscription" method="post">
+                <div>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <br>
+                <div>
+                    <label for="mdp">Mot de passe :</label>
+                    <input type="password" id="mdp" name="mdp">
+                </div>
+                <br>
+                <div>
+                    <label for="theme">Theme :</label>
+                    <select id="theme" name="theme">
+                        {% for  row in post[1] %}
+                        <option value="{{row[0]}}">{{row[1]}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                <br>
+                <div>
+                    <label for="abonnement">Abonnement :</label>
+                    <select id="abonnement" name="abonnement">
+                        {% for  row in post[0] %}
+                        <option value="{{row[0]}}">{{row[1]}}</option>
+                        {% endfor %}
+                      </select>
+                </div>
+                <br>
+                <div class="button">
+                        <button type="submit">S'inscrire</button>
+                    </div>
+            </form>
+            </center>
+
+
+        {% include 'footer.html' %}
+
+
+</html>

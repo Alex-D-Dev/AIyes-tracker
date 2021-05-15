@@ -1,0 +1,31 @@
+<html>
+        
+        {% include 'header.html' %}
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>
+                <form action="/confirmation_connexion" method="post">
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <br>
+                <div>
+                    <label for="mdp">Mot de passe :</label>
+                    <input type="password" id="mdp" name="mdp">
+                </div>
+                <br>
+                <div class="button">
+                        <button type="submit">Se connecter</button>
+                </div>
+                </form>
+        </center>
+
+
+        {% include 'footer.html' %}
+
+
+</html>

@@ -1,0 +1,23 @@
+    <head>
+        <meta charset="utf-8" />
+        {% if session['theme'] == None or session['theme'] == 1 %}
+            <link rel="stylesheet" href="{{ url_for('static', filename= 'style_clair.css') }}">
+        {% else %}
+            <link rel="stylesheet" href="{{ url_for('static', filename= 'style_sombre.css') }}">
+        {% endif %}
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon1.ico') }}">
+        <title>AI</title>
+    </head>
+
+    <body >
+        {% if session['theme'] == None %}
+        <a class="menu1" href={{ url_for('inscription') }}>S'inscrire</a>
+        <a class="menu1" href={{ url_for('index') }}>Se connecter</a>
+        {% else %}
+        <a class="menu2" href={{ url_for('aiyestracker') }}>AI tracker</a>
+        <a class="menu2" href={{ url_for('resultats') }}>Résultats</a>
+        <a class="menu2" href={{ url_for('deconnecter') }}>Se déconnecter</a>
+        {% endif %}
+    </body>
+    

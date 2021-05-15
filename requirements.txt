@@ -1,0 +1,7 @@
+matplotlib
+opencv-python
+PyAutoGUI
+tensorflow
+seaborn
+scikit-learn
+keras
